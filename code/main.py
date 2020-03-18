@@ -26,6 +26,7 @@ def Get_Report(true_labels, pred_labels, labels=None, digits=4):
 all_SC, all_SSR, all_SRL = [], [], []
 label_SC, label_SSR, label_SRL = set(), set(), set()
 
+# Read Data
 for line in open("./data/MAM-SC.txt").read().split("\n"):
 	objs = line.lower().split(", ")
 	if len(objs)==2:
@@ -59,6 +60,7 @@ print(label_SRL)
 
 
 
+# Split Data
 ratio = 0.80
 train_SC,  test_SC  = all_SC[:int(len(all_SC)*ratio)],   all_SC[int(len(all_SC)*ratio):]
 train_SSR, test_SSR = all_SSR[:int(len(all_SSR)*ratio)], all_SSR[int(len(all_SSR)*ratio):]
@@ -69,6 +71,7 @@ print(len(train_SRL), len(test_SRL))
 
 
 
+# Word2Vec Initiation
 w2v_embdding_size = 100
 w2v = Word2Vec.load("./w2v/w2v_model")
 vocabulary = set(open("./w2v/text8_vocabulary.txt").read().split("\n"))
@@ -78,6 +81,7 @@ label_SSR = list(label_SSR)
 label_SRL = list(label_SRL)
 
 
+# Encoding Sentence
 def Encode_Sentence_Data(array, label_map):
 	embeddings, labels = [], []
 	for line in array:
@@ -101,6 +105,7 @@ def Encode_Sentence_Data(array, label_map):
 
 	return embeddings, labels
 
+# Encoding Sentence+Word
 def Encode_Word_Data(array, label_map):
 	embeddings, wembeddings, labels = [], [], []
 	for line in array:
@@ -180,6 +185,7 @@ class C2F(torch.nn.Module):
 		self.ST3_fc1 = torch.nn.Linear(212 + 100 + 50 + 1, 50)
 		self.ST3_fc2 = torch.nn.Linear(50, len(label_SRL))
 
+	# Feed-Forward
 	def CNNRNN_Encoder(self, x):
 		xd = torch.cat([conv(x) for conv in self.convs], dim=1)
 		xd = xd.view(-1, xd.size(1))
@@ -202,6 +208,7 @@ class C2F(torch.nn.Module):
 
 		return out
 
+	# ST1
 	def coarse_forward1(self, x1):
 		# (32, 212)
 		x1e = self.CNNRNN_Encoder(x1)
@@ -214,6 +221,7 @@ class C2F(torch.nn.Module):
 
 		return x1e_fc2
 
+	# ST2
 	def coarse_forward2(self, x2):
 		# (32, 212)
 		x2e = self.CNNRNN_Encoder(x2)
@@ -233,6 +241,7 @@ class C2F(torch.nn.Module):
 
 		return x2ec_fc2
 
+	# ST3
 	def fine_forward3(self, x3s, x3w):
 		# (32, 212)
 		x3s = self.CNNRNN_Encoder(x3s)
