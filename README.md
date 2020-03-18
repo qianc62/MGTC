@@ -1,22 +1,20 @@
 # MGTC
 
-This the the repository for the CAiSE'2020 paper "***Process Model Extraction via Multi-Grained Text Classification***".
+This the the repository for the CAiSE'2020 paper "***An Approach for Process Model Extraction By Multi-Grained Text Classification***".
 
 
 ## Overview
 
 - code/ 
-  contains the source codes.
+  contains the source code.
 - data/ 
-  contains some datasets used for evaluating.
-
-  (We will release them once published.)
+  contains two datasets used for evaluation.
 
 ### Reqirements:
 
 * Python (≥3.0)
 * PyTorch (≥1.0)
-* [BERT-Base](https://github.com/google-research/bert)
+* [BERT-Base](https://github.com/google-research/bert) or [Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html)
 
 ### Citation
 
@@ -24,8 +22,8 @@ When referencing, please cite this paper as:
 
 ```
 @inproceedings{MGTC,
-  title={Process Model Extraction via Multi-Grained Text Classification},
-  author={Chen Qian and Lijie Wen and Zan Zong and Shuang Li and Leilei Lin and Akhil Kumar},
+  title={An Approach for Process Model Extraction By Multi-Grained Text Classification},
+  author={Chen Qian and Lijie Wen and Akhil Kumar and Leilei Lin and Li Lin and Zan Zong and Shu'ang Li and Jianmin Wang},
   booktitle={Proceedings of The 32nd International Conference on Advanced Information Systems Engineering (CAiSE)},
   year={2020}
 }
