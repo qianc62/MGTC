@@ -11,12 +11,12 @@ This the the repository for the CAiSE-2020 paper "***An Approach for Process Mod
 
 
 ## Datasets
-The dataset named as X-Y denotes a text classification task Y on data source X. For two sentence-level tasks -- SC (sentence classification) and SSR (sentence semantics recognition), an example <x,y> in each line denotes a sentence x and its label y. each of them can be solely used to evaluate single-sentence classification tasks. For the word-level task -- SRL (semantic role labeling), an example <x,i,y> in each line denotes a sentence x, a subordinate word index i and a corresponding label y. It can be further used to evaluate sequential-text classification tasks. We will keep updating them to provide more reliable version(s), including correcting wrongly-annotated labels and adding more training/testing examples.
+The dataset named as X-Y denotes a text classification task Y on data source X. For two sentence-level tasks -- SC (sentence classification) and SSR (sentence semantics recognition), an example <x,y> in each line denotes a sentence x and its label y. each of them can be solely used to evaluate single-sentence classification tasks. For the word-level task -- SRL (semantic role labeling), an example <x,i,y> in each line denotes a sentence x, a subordinate word index i and a corresponding label y. It can be further used to evaluate sequential-text classification tasks. We will keep updating them to provide more reliable version(s), including correcting wrongly-annotated labels and adding more training/testing examples. The up-to-date version can be directly downloaded from this repository.
 
 
 ## Reqirements
-* Python (≥3.0)
-* PyTorch (≥1.0)
+* Python (3.6.8, 3.7.3 or above)
+* PyTorch (1.0.1) 
 * [Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html). Note that the embedding layer can be replaced by other models such as [BERT-Base](https://github.com/google-research/bert). If necessary, kindly replace corresponding lines of the code to do so.
 
 
