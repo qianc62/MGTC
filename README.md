@@ -1,6 +1,6 @@
 # MGTC
 
-This the the repository for the CAiSE-2020 paper "***An Approach for Process Model Extraction By Multi-Grained Text Classification***". In this paper, we formalize the PME task into the multi-grained text classification problem, and propose a neural network and the coarse-to-fine (grained) learning mechanism to effectively extract multi-grained procedural knowledge.
+This the the repository for the [CAiSE-2020](http://caise20.imag.fr) accepted long paper "***An Approach for Process Model Extraction By Multi-Grained Text Classification***". In this paper, we formalize the PME task into the multi-grained text classification problem, and propose a neural network and the coarse-to-fine (grained) learning mechanism to effectively extract multi-grained procedural knowledge.
 
 
 ## Overview
@@ -15,9 +15,9 @@ The dataset named as X-Y denotes a text classification task Y on data source X. 
 
 
 ## Reqirements
-* Python (3.6.8, 3.7.3 or above)
+* Python (3.6.8 or 3.7.3)
 * PyTorch (1.0.1) 
-* [Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html). Note that the embedding layer can be replaced by other models such as [BERT-Base](https://github.com/google-research/bert). If necessary, kindly replace corresponding lines of the code to do so.
+* [Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html). Note that the embedding layer can be replaced by other models such as [BERT](https://github.com/google-research/bert). If necessary, kindly replace corresponding lines of the code to do so.
 
 
 ### Citation
