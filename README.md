@@ -25,10 +25,11 @@ If you find this project helps, please kindly consider citing this paper as:
 
 ```
 @inproceedings{MGTC,
-  title={An Approach for Process Model Extraction By Multi-Grained Text Classification},
-  author={Chen Qian and Lijie Wen and Akhil Kumar and Leilei Lin and Li Lin and Zan Zong and Shuang Li and Jianmin Wang},
-  booktitle={Proceedings of The 32nd International Conference on Advanced Information Systems Engineering (CAiSE)},
-  year={2020}
+  title = {An Approach for Process Model Extraction By Multi-Grained Text Classification},
+  author = {Chen Qian and Lijie Wen and Akhil Kumar and Leilei Lin and Li Lin and Zan Zong and Shuang Li and Jianmin Wang},
+  booktitle = {Proceedings of The 32nd International Conference on Advanced Information Systems Engineering (CAiSE)},
+  year = {2020},
+  pages = {268-282}
 }
 ```
 
