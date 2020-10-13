@@ -11,7 +11,11 @@ This the the repository for the [CAiSE-2020](http://caise20.imag.fr) accepted lo
 
 
 ## Datasets
-The dataset named as X-Y denotes a text classification task Y on data source X. For two sentence-level tasks -- SC (sentence classification) and SSR (sentence semantics recognition), an example <x,y> in each line denotes a sentence x and its label y. each of them can be solely used to evaluate single-sentence classification tasks. For the word-level task -- SRL (semantic role labeling), an example <x,i,y> in each line denotes a sentence x, a subordinate word index i and a corresponding label y. It can be further used to evaluate sequential-text classification tasks. We will keep updating them to provide more reliable version(s), including correcting wrongly-annotated labels and adding more training/testing examples. The up-to-date version can be directly downloaded from this repository.
+The dataset named as X-Y denotes a text classification task Y on data source X. For two sentence-level tasks -- SC (sentence classification) and SSR (sentence semantics recognition), an example <x,y> in each line denotes a sentence x and its label y. each of them can be solely used to evaluate single-sentence classification tasks. For the word-level task -- SRL (semantic role labeling), an example <x,i,y> in each line denotes a sentence x, a subordinate word index i and a corresponding label y. It can be further used to evaluate sequential-text classification tasks. We will keep updating them to provide more reliable version(s), including correcting wrongly-annotated labels and adding more training/testing examples. The up-to-date version can be directly downloaded from this repository. In summary:
+* COR for cooking recipes and MAM for maintenance manuals.
+* COR-SC.txt  is the dataset for sentence-level classiﬁcation (ST1) to identify whether a sentence is describing an action or a statement. The format is <Sentence, Label>.
+* COR-SSR.txt is the dataset for sentence-level semantics recognition (ST2) to recognize the semantics of a Statement sentence to control the execution of following actions. The format is <Sentence, Label, Y/N> in which Y denotes the sentence belongs to the label while N not (so, you could ignore all examples with N notations, just focus on the examples with Y notations).
+* COR-SRL.txt is the dataset for word-level semantic role labeling to assign semantic roles to words in an Action sentence. The format is <Word, Word Postion in the Sentence, Label>.
 
 
 ## Reqirements
