@@ -1,6 +1,6 @@
 # MGTC
 
-This the the repository for the [CAiSE-2020](http://caise20.imag.fr) accepted long paper "***An Approach for Process Model Extraction By Multi-Grained Text Classification***". In this paper, we formalize the PME task into the multi-grained text classification problem, and propose a neural network and the coarse-to-fine (grained) learning mechanism to effectively extract multi-grained procedural knowledge.
+This the the repository for the [CAiSE-2020](http://caise20.imag.fr) accepted long paper "[An Approach for Process Model Extraction By Multi-Grained Text Classification](https://link.springer.com/chapter/10.1007%2F978-3-030-49435-3_17)". In this paper, we formalize the PME task into the multi-grained text classification problem, and propose a neural network and the coarse-to-fine (grained) learning mechanism to effectively extract multi-grained procedural knowledge.
 
 
 ## Overview
